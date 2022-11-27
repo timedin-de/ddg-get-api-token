@@ -1,11 +1,11 @@
 #!/bin/bash
 clear;
 echo -n "Please enter your username (duck.com address without @duck.com): ";
-read user;
+read user < /dev/tty;
 #Request OTP per Mail
 curl -s https://quack.duckduckgo.com/api/auth/loginlink?user=${user}>/dev/null 2>&1;
 echo -n "Please enter the OTP from the email: ";
-read otp;
+read otp < /dev/tty;
 #Parse OTP for URL (replace spaces with plus)
 otp=${otp// /+};
 #Get register token with email otp and json-parse it
