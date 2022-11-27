@@ -9,7 +9,6 @@ Create an account and @duck.com email.
 ```
 curl -sSL https://raw.githubusercontent.com/timedin-de/ddg-get-api-token/main/create_token.sh | bash
 ```
-
 ### Alternatives
 
 #### Clone the repo and run the bash file
