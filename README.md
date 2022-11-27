@@ -1,7 +1,11 @@
 # ddg-get-api-token
-Gets your API token for DuckDuckGo private email redirecting service. Needed for Bitwarden etc.
+Get your API token for DuckDuckGo private email redirecting service. Needed for Bitwarden, for example.
 
 ## Usage:
-`git clone https://github.com/timedin-de/ddg-get-api-token.git`
-`cd ddg-get-api-token`
-`bash create_token.sh`
+Clone the repo, run the bash file and follow the instructions 
+```
+git clone https://github.com/timedin-de/ddg-get-api-token.git
+cd ddg-get-api-token
+bash create_token.sh
+```
+:tada:
