@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./script.js"></script>
+</head>
+<body>
+	<h1>DuckDuckGo Email-Token</h1>
+	<div id="duck-email-input">
+		<label for="duck-email">Duck-Email:</label><input type="text" id="duck-email"><label for="duck-email">@duck.com</label><br>
+		<button id="requestEmailBtn">Bestätigungs Email anfordern.</button>
+	</div>
+	<div id="duck-otp-input" style="display:none;">
+		<label for="duck-otp">EMail-OTP:</label><input type="text" size="30" id="duck-otp"><br>
+		<button id="submit-otpBtn">Token anfordern.</button>
+	</div>
+	<div id="duck-token-output" style="display:none;">
+		<label for="out-token">Token:</label><input type="text" size="60" readonly id="out-token">
+	</div>
+</body>
+</html>
