@@ -1,5 +1,5 @@
 #!/bin/bash
-echo " ";
+clear;
 echo -n "Please enter your username (duck.com address without @duck.com): ";
 read user;
 #Request OTP per Mail
