@@ -19,13 +19,15 @@ function curl($url,$auth){
 }
 ?><?php
 header('Content-Type: application/json');
-if(isset($_POST["username"])&&!isset($_POST["otp"])) {
-	$user = $_POST["username"];
+$data=json_decode(file_get_contents("php://input"),true);
+
+if(isset($data["username"])&&!isset($data["otp"])) {
+	$user = $data["username"];
 	curl($base_uri."auth/loginlink?user=$user",null);
 
 	die('{"state":"success","task":"requestAuthEmail"}');
-} else if (isset($_POST["otp"])&&isset($_POST["username"])) {
-	$array_resp=curl($base_uri."auth/login?otp=".urlencode($_POST["otp"])."&user=".urlencode($_POST["username"]),null);
+} else if (isset($data["otp"])&&isset($data["username"])) {
+	$array_resp=curl($base_uri."auth/login?otp=".urlencode($data["otp"])."&user=".urlencode($data["username"]),null);
 	if(!isset($array_resp["token"])) {
 		die('{"state":"error","description":"No_otp_token_in_response"}');
 	}
